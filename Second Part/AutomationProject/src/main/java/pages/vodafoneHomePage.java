@@ -19,17 +19,11 @@ public class vodafoneHomePage extends Base{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//*[@id=\"onetrust-close-btn-container\"]")
+	@FindBy(xpath = "//button[contains(@class,'close')]") 
 	WebElement CloseCookies;
 	
-	@FindBy(xpath = "/html/body/vf-root/main/section[2]/vf-fallback/section/a")
+	@FindBy(xpath = "//a[contains(text(),'انتقل الي الصفحة الرئيسية ! ')]")
 	WebElement HomePageLink;
-	
-	@FindBy(xpath = "/html/body/vf-root/main/section[1]/vf-nav-bar/nav/div/div[1]/p")
-	WebElement l;
-	
-	@FindBy(xpath = "/html/body/vf-root/main/section[2]/vf-landing-page/vf-ng-main-container[2]/section/div/div[2]/vf-main-carousel/div[1]/div[2]/img")
-	WebElement imgHomepage;
 	
 	public void OpenHomePage() throws InterruptedException
 	{

@@ -18,16 +18,16 @@ public class LoginPage extends Base{
 	}
 	
 	
-	@FindBy(xpath = "//*[@id=\"userProfileMenu\"]/button")
+	@FindBy(css = "#userProfileMenu button")
 	WebElement Account_Icon;
 	
-	@FindBy(xpath = "//*[@id=\"username\"]")
+	@FindBy(id = "username")
 	WebElement MobileNumber;
 	
-	@FindBy(xpath = "//*[@id=\"password\"]")
+	@FindBy(id = "password")
 	WebElement password;
 	
-	@FindBy(xpath = "//*[@id=\"submitBtn\"]")
+	@FindBy(id = "submitBtn")
 	WebElement Go_tO_MyAccount;
 	
 	public void Login(String mobilenum , String pass) throws InterruptedException

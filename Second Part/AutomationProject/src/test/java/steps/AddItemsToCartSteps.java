@@ -75,28 +75,24 @@ public class AddItemsToCartSteps extends Base{
 	}
 	
 	
-    @And("Check that item added to cart")
-    public void Check_that_item_added_to_cart()
+    @And("Check that items added to cart")
+    public void Check_that_items_added_to_cart()
     {
-    	driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-    	driver.findElement(By.xpath("/html/body/vf-root/main/section[2]/vf-middleware/vf-product-details-page/div[2]/div/div/div[1]/div[3]/div[7]/button[1]")).click();
-    	driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-    	Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"blackFridayModal\"]/div/div[2]/p[2]")).isDisplayed());
-	    
-		driver.findElement(By.xpath("//*[@id=\"blackFridayModal\"]/div/div[3]/button")).click();	
+    		
     }
     
     @And("User add 2 item to the cart")
-    public void User_add_2_item_to_the_cart()
+    public void User_add_2_item_to_the_cart() throws InterruptedException
     {
     	mp = new MainProduct();
     	mp.add_item_to_cart();
     	}
     
     @And("User search for the last item as {string} and add to cart")
-    public void User_search_for_the_last_item_as_itemname_and_add_to_cart(String itemname)
+    public void User_search_for_the_last_item_as_itemname_and_add_to_cart(String itemname) throws InterruptedException
     {
     	sp = new SearchProduct ();
+    	sp.addproductfromsearch(itemname);
     }
     
    

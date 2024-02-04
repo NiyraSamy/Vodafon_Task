@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/java/features" , 
 		glue = "steps" , 
-		tags = "@SelectScenario3",
+		tags = "@SelectScenario1",
 		plugin = {"pretty", "html:target/reports/report.html" , "json:target/reports/report.json",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"timeline:test-output-thread/"} , dryRun = false
